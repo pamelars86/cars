@@ -1,0 +1,19 @@
+.image-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    
+    /*this specifiy the distance between cells 
+    in the vertical and horizontal direction */
+    grid-gap: 0 10px;
+    
+    /*how tall each of these different row to dffirent cell that you see are going to be*/
+    /*so we'll see that each of different rows are going to shrink down in size quite a bit*/
+    /*however many of our images are actually much larger than that*/
+    /*ISSUE 1: SOME CELLS ARE OVERRIDING THE NEXT CELL DOWN*/
+    grid-auto-rows:  10px;
+}
+
+.image-list img{
+    width: 250px;
+    grid-row-end: span 2;
+}
